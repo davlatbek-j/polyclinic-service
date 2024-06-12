@@ -14,11 +14,5 @@ public class ApiResponse<T>
 {
     T object;
     String message;
-    int statusCode=200;
 
-    public ApiResponse(T object, String message)
-    {
-        this.object = object;
-        this.message = message;
-    }
 }

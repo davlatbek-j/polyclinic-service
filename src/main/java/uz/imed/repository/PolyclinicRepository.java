@@ -6,7 +6,7 @@ import uz.imed.entity.Polyclinic;
 
 public interface PolyclinicRepository extends JpaRepository<Polyclinic,Long>
 {
-    @Query(value = "SELECT polyclinic_id FROM polyclinic_patients_phone WHERE patients_phone = ?1", nativeQuery = true)
+    @Query(value = "SELECT polyclinic_id FROM polyclinic_patients_phone WHERE patients_phone = :phone", nativeQuery = true)
     Long existsByPhone(String phone);
 
     Polyclinic findByNumber(Integer number);
